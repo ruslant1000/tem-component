@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>portlet-1</display-name>
+<!--   <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  
+  
+  <servlet>
+    <description></description>
+    <display-name>Portlet1</display-name>
+    <servlet-name>Portlet1</servlet-name>
+    <servlet-class>kz.Portlet1</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Portlet1</servlet-name>
+    <url-pattern>/Portlet1</url-pattern>
+  </servlet-mapping>
+
+  
+  
+  
+<servlet>
+    <servlet-name>NavomaticApplication</servlet-name>
+    <servlet-class>org.apache.wicket.protocol.http.WicketServlet</servlet-class>
+    <init-param>
+        <param-name>applicationClassName</param-name>
+        <param-value>zz.MyExampleApplication</param-value>
+    </init-param>
+    <load-on-startup>1</load-on-startup>
+</servlet>
+<servlet-mapping>
+    <servlet-name>NavomaticApplication</servlet-name>
+    <url-pattern>/aaa/*</url-pattern>
+</servlet-mapping>
+ 
+
+
+    <filter>
+        <filter-name>HelloWorldApplication</filter-name>
+        <filter-class>org.apache.wicket.protocol.http.WicketFilter</filter-class>
+        <init-param>
+          <param-name>applicationClassName</param-name>
+          <param-value>zz.MyExampleApplication</param-value>
+        </init-param>
+    </filter>
+    <filter-mapping>
+        <filter-name>HelloWorldApplication</filter-name>
+        <url-pattern>/aaa/*</url-pattern>
+        <dispatcher>REQUEST</dispatcher>
+        <dispatcher>FORWARD</dispatcher>
+    <dispatcher>INCLUDE</dispatcher>
+    </filter-mapping>
+ 
+ 
+ 
+ 
+<servlet>
+<servlet-name>HelloPortlet</servlet-name>
+<servlet-class>org.apache.pluto.container.driver.PortletServlet</servlet-class>
+<init-param>
+<param-name>portlet-name</param-name>
+<param-value>HelloWorld2</param-value>
+</init-param>
+<load-on-startup>1</load-on-startup>
+</servlet>
+<servlet-mapping>
+<servlet-name>HelloPortlet</servlet-name>
+<url-pattern>/PlutoInvoker/HelloWorld2</url-pattern>
+</servlet-mapping>
+	
+
+
+
+<servlet>
+<servlet-name>wicket7examplePortlet</servlet-name>
+<servlet-class>org.apache.pluto.container.driver.PortletServlet</servlet-class>
+<init-param>
+<param-name>portlet-name</param-name>
+<param-value>wicket7examplePortlet</param-value>
+</init-param>
+<load-on-startup>1</load-on-startup>
+</servlet>
+<servlet-mapping>
+<servlet-name>wicket7examplePortlet</servlet-name>
+<url-pattern>/PlutoInvoker/wicket7examplePortlet</url-pattern>
+</servlet-mapping>
+
+	
+	
+	
+	<filter>
+		<filter-name>wicket7examplePortlet</filter-name>
+		<filter-class>org.apache.wicket.portlet.PortletFilter</filter-class>
+		<init-param>
+			<param-name>applicationClassName</param-name>
+			<param-value>kz.MyApplication</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>wicket7examplePortlet</filter-name>
+		<url-pattern>/wicket7examplePortlet/*</url-pattern>
+		<dispatcher>FORWARD</dispatcher>
+		<dispatcher>REQUEST</dispatcher>
+		<dispatcher>INCLUDE</dispatcher>
+	</filter-mapping> 
+ -->	
+	
+<!-- 	
+		<filter>
+		<filter-name>wicket7my</filter-name>
+		<filter-class>org.apache.wicket.portlet.PortletFilter</filter-class>
+		<filter-class>org.apache.wicket.protocol.http.WicketFilter</filter-class>
+		<init-param>
+			<param-name>applicationClassName</param-name>
+			<param-value>kz.MyApplication</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>wicket7my</filter-name>
+		<url-pattern>/wicket7my/*</url-pattern>
+		<dispatcher>FORWARD</dispatcher>
+		<dispatcher>REQUEST</dispatcher>
+		<dispatcher>INCLUDE</dispatcher>
+	</filter-mapping> -->
+	
+	
+	
+	<filter>
+		<filter-name>wicket7myPortlet</filter-name>
+		<filter-class>org.apache.wicket.portlet.PortletFilter</filter-class>
+		<init-param>
+			<param-name>applicationClassName</param-name>
+			<param-value>kz.MyApplication</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>wicket7myPortlet</filter-name>
+		<url-pattern>/wicket7myPortlet/*</url-pattern>
+		<dispatcher>FORWARD</dispatcher>
+		<dispatcher>REQUEST</dispatcher>
+		<dispatcher>INCLUDE</dispatcher>
+	</filter-mapping>
+	<listener>
+		<listener-class>com.liferay.portal.kernel.servlet.PluginContextListener</listener-class>
+	</listener>
+	<listener>
+		<listener-class>com.liferay.portal.kernel.servlet.SerializableSessionAttributeListener</listener-class>
+	</listener> 
+	 
+	
+	
+	<!-- <servlet>
+	<servlet-name>wicket7myPortlet Servlet</servlet-name>
+		<servlet-class>com.liferay.portal.kernel.servlet.PortletServlet</servlet-class>
+		<init-param>
+			<param-name>portlet-class</param-name>
+			<param-value>org.apache.wicket.portlet.WicketPortlet</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>wicket7myPortlet Servlet</servlet-name>
+		<url-pattern>/wicket7myPortlet/*</url-pattern>
+	</servlet-mapping>
+	<jsp-config>
+		<taglib>
+			<taglib-uri>http://liferay.com/tld/aui</taglib-uri>
+			<taglib-location>/WEB-INF/tld/aui.tld</taglib-location>
+		</taglib>
+		<taglib>
+			<taglib-uri>http://java.sun.com/portlet_2_0</taglib-uri>
+			<taglib-location>/WEB-INF/tld/liferay-portlet.tld</taglib-location>
+		</taglib>
+		<taglib>
+			<taglib-uri>http://liferay.com/tld/portlet</taglib-uri>
+			<taglib-location>/WEB-INF/tld/liferay-portlet-ext.tld</taglib-location>
+		</taglib>
+		<taglib>
+			<taglib-uri>http://liferay.com/tld/security</taglib-uri>
+			<taglib-location>/WEB-INF/tld/liferay-security.tld</taglib-location>
+		</taglib>
+		<taglib>
+			<taglib-uri>http://liferay.com/tld/theme</taglib-uri>
+			<taglib-location>/WEB-INF/tld/liferay-theme.tld</taglib-location>
+		</taglib>
+		<taglib>
+			<taglib-uri>http://liferay.com/tld/ui</taglib-uri>
+			<taglib-location>/WEB-INF/tld/liferay-ui.tld</taglib-location>
+		</taglib>
+		<taglib>
+			<taglib-uri>http://liferay.com/tld/util</taglib-uri>
+			<taglib-location>/WEB-INF/tld/liferay-util.tld</taglib-location>
+		</taglib>
+	</jsp-config> -->	
+	</web-app>
